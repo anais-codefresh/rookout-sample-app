@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "rookout": "^0.1.20"
+    "rookout": "^0.1.112"
   },
   "devDependencies": {
     "@types/node": "^10.17.47",
