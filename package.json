@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "http-terminator": "^2.0.3",
     "rookout": "^0.1.112"
   },
   "devDependencies": {
