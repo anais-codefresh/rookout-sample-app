@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "rookout-chart.fullname" . }}-test-connection"
+  labels:
+{{ include "rookout-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "rookout-chart.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
