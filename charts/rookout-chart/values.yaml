@@ -64,5 +64,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-rookout_token: rookout_token

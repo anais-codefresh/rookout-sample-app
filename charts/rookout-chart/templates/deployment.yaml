@@ -27,12 +27,6 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:          
-          - name: "rookout_token"
-            valueFrom:
-              secretKeyRef:
-                key:  rookout_token
-                name: {{ .Release.Name }}-auth
           ports:
             - name: http
               containerPort: 80
