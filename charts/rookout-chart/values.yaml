@@ -32,8 +32,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
-
+  port: 5000
+  
 ingress:
   enabled: false
   annotations: {}
@@ -64,3 +64,5 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+rookout_token: rookout_token

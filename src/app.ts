@@ -1,14 +1,10 @@
 "use strict";
-const rookout = require('rookout')
 
-rookout.start({
-    labels:
-        {
-            "env":"dev" // Optional,see Labels page below Projects
-        }
-});
 const express = require("express")
 const app = express()
+const rookout = require('rookout');
+
+rookout.start();
 
 app.get('/', (req, res) => res.send("Hello World"))
 app.get("/hello/:name", (req, res) => {
