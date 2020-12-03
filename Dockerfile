@@ -13,3 +13,4 @@ RUN npm install express
 RUN npm install
 COPY --from=appbuild /usr/src/app/dist ./dist
 EXPOSE 5000
+RUN npm run start

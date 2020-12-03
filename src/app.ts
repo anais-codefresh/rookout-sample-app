@@ -1,8 +1,12 @@
 "use strict";
 const rookout = require('rookout')
 
-rookout.start()
-
+rookout.start({
+    labels:
+        {
+            "env":"dev" // Optional,see Labels page below Projects
+        }
+});
 const express = require("express")
 const app = express()
 
